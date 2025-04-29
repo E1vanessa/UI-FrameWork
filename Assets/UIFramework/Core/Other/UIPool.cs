@@ -23,7 +23,6 @@ public class UIPool : MonoSingleton<UIPool>
     {
         if (gameObject == null) return;
 
-        gameObject.SetActive(false);
         UIList.Add(gameObject);
 
         if (DestroyCoroutine.TryGetValue(gameObject, out Coroutine existingCoroutine))
